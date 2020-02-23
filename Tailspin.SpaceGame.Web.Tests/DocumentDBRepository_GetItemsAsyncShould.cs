@@ -20,7 +20,8 @@ namespace Tests
                 .Assembly
                 .GetManifestResourceStream("Tailspin.SpaceGame.Web.SampleData.scores.json"))
             {
-                _scoreRepository = new LocalDocumentDBRepository<Score>(scoresData);
+                
+                _scoreRepository = new LocalDocumentDBRepository<Score>(@"SampleData/scores.json");
             }
         }
 
